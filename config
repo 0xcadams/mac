@@ -1,0 +1,10 @@
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+Host hub.lieuu.com
+        HostName hub.lieuu.com
+        LocalForward 5901 localhost:5901
+        LocalForward 27017 localhost:27017
+        LocalForward 6379 localhost:6379
+        LocalForward 3001 localhost:3001
