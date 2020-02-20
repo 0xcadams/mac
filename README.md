@@ -1,9 +1,7 @@
 <h1 align="center">
-  <br>
   <img src="assets/homebrew-256x256.png" alt="Homebrew" width="200">
-  <br>
-  mac-setup
-  <br>
+  <br />
+  mac
 </h1>
 
 Configuration files for Homebrew and zsh for a Chase Adams Mac.
