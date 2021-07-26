@@ -146,7 +146,8 @@ module.exports = {
     "hypercwd",
     "hyperline",
     "hyper-fading-scrollbar",
-    "hyper-tabs-enhanced"
+    "hyper-tabs-enhanced",
+    "hyper-pane"
   ],
 
   // in development, you can create a directory under

@@ -1,5 +1,6 @@
+
 # If you come from bash you might have to change your $PATH.
-export PATH=/usr/local/anaconda3/bin:"$PATH"
+export PATH=/usr/local/anaconda3/bin:/Users/chase/.mix/escripts:"$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/chase/.oh-my-zsh"
@@ -102,8 +103,12 @@ source $ZSH/oh-my-zsh.sh
 # autoload -U promptinit; promptinit
 # prompt spaceship
 
-source $(brew --prefix nvm)/nvm.sh
-nvm use --delete-prefix node
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/chase/git/me/interview-api/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/chase/git/me/interview-api/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/chase/git/me/interview-api/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/chase/git/me/interview-api/node_modules/tabtab/.completions/sls.zsh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -122,3 +127,15 @@ unset __conda_setup
 
 alias install="brew install"
 alias gitclean="git branch | grep -v "master" | xargs git branch -D"
+alias gitcleanmain="git branch | grep -v "main" | xargs git branch -D"
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+. "$(brew --prefix asdf)"/asdf.sh
+export ERL_FLAGS="-kernel shell_history enabled"
+
+export GPG_TTY=$(tty)

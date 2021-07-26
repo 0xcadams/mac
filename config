@@ -1,10 +1,39 @@
 Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_rsa
-Host hub.lieuu.com
-        HostName hub.lieuu.com
+        IgnoreUnknown UseKeychain
+        AddKeysToAgent yes
+        UseKeychain yes
+        IdentityFile ~/.ssh/id_ed25519_sk
+
+Host hub
+        HostName home.cadams.io
+        User chase
+        LocalForward 5432 localhost:5432
+        LocalForward 4000 localhost:4000
+        LocalForward 8080 localhost:8080
+        LocalForward 8081 localhost:8081
         LocalForward 5901 localhost:5901
-        LocalForward 27017 localhost:27017
-        LocalForward 6379 localhost:6379
-        LocalForward 3001 localhost:3001
+        RemoteForward 5554 localhost:5554
+        RemoteForward 5555 localhost:5555
+
+Host hub-ngrok
+        HostName 6.tcp.ngrok.io
+        Port 14628
+        User chase
+        LocalForward 5432 localhost:5432
+        LocalForward 4000 localhost:4000
+        LocalForward 8080 localhost:8080
+        LocalForward 8081 localhost:8081
+        LocalForward 5901 localhost:5901
+        RemoteForward 5554 localhost:5554
+        RemoteForward 5555 localhost:5555
+
+Host hub-local
+        HostName 192.168.0.211
+        User chase
+        LocalForward 5432 localhost:5432
+        LocalForward 4000 localhost:4000
+        LocalForward 8080 localhost:8080
+        LocalForward 8081 localhost:8081
+        LocalForward 5901 localhost:5901
+        RemoteForward 5554 localhost:5554
+        RemoteForward 5555 localhost:5555
