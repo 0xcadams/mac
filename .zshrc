@@ -69,7 +69,7 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws brew composer docker docker-compose git kubectl npm pip python yarn zsh-autosuggestions)
+plugins=(aws autojump brew composer docker docker-compose git kubectl npm pip python yarn zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -139,3 +139,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export ERL_FLAGS="-kernel shell_history enabled"
 
 export GPG_TTY=$(tty)
+
+# eval "$(ssh-agent -s)"
+
+export HISTSIZE=10000
+export SAVEHIST=10000

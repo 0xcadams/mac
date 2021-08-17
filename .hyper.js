@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: 'Hack, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: 'Fira Code, Hack, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -142,12 +142,7 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     "hyper-search",
-    "hyperpower",
-    "hypercwd",
-    "hyperline",
-    "hyper-fading-scrollbar",
-    "hyper-tabs-enhanced",
-    "hyper-pane"
+    "hyperpower"
   ],
 
   // in development, you can create a directory under
